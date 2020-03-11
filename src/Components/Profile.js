@@ -64,6 +64,16 @@ const user = {
 };
 
 const Profile = props => {
+  useEffect(() => {
+    if (!error) {
+      const fetchData = async () => {
+        // insert api call here
+      };
+
+      fetchData();
+    }
+  }, []);
+
   return (
     <ProfileContainer>
       <BackgroundImageContainer>
