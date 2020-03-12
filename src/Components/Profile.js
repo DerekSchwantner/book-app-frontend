@@ -23,86 +23,6 @@ const user = {
 
   // All the users bokshelves they have created ⬇︎
   user_bookshelves: [
-    // ORIGINAL
-    // {
-
-    //     id: 1, // Primary Key
-    //     shelf_name: 'Plilosophy',
-    //     user_id: 1,
-    //     user_type: 'Creator', // Idea💡: we could use the values Creator / Author or Viewer / Reader ( for editing privileges )
-
-    //     // Books Inside the bookshelf ⬇︎
-    //     bookshelf_book: {
-
-    //         id: 1, // Primary Key
-    //         book_id: 1,
-    //         bookshelf_id: 1,
-
-    //         book: {
-
-    //             id: 1, // Primary Key
-    //             isbn: 1253
-
-    //         }
-
-    //     },
-
-    //     bookshelf_book: {
-
-    //         id: 2, // Primary Key
-    //         book_id: 2,
-    //         bookshelf_id: 1,
-
-    //         book: {
-
-    //             id: 2, // Primary Key
-    //             isbn: 8723
-
-    //         }
-
-    //     }
-    // },
-
-    // {
-
-    //     id: 2, // Primary Key
-    //     shelf_name: 'Fun',
-    //     user_id: 1,
-    //     user_type: 'Creator', // Idea💡: we could use the values Creator / Author or Viewer / Reader ( for editing privileges )
-
-    //     bookshelf_book: {
-
-    //         id: 1, // Primary Key
-    //         book_id: 1,
-    //         bookshelf_id: 2,
-
-    //         book: {
-
-    //             id: 1, // Primary Key
-    //             isbn: 6301
-
-    //         }
-
-    //     },
-
-    //     bookshelf_book: {
-
-    //         id: 2, // Primary Key
-    //         book_id: 2,
-    //         bookshelf_id: 2,
-
-    //         book: {
-
-    //             id: 2, // Primary Key
-    //             isbn: 1287
-
-    //         }
-
-    //     }
-    // }
-
-    // TESTING
-
     {
       id: 1, // Primary Key
       shelf_name: "Plilosophy",
@@ -144,6 +64,16 @@ const user = {
 };
 
 const Profile = props => {
+  useEffect(() => {
+    if (!error) {
+      const fetchData = async () => {
+        // insert api call here
+      };
+
+      fetchData();
+    }
+  }, []);
+
   return (
     <ProfileContainer>
       <BackgroundImageContainer>
