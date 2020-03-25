@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { size, device } from "../breakpoints";
-
+// here we need to pull data from graphQL
 const user = {
   id: 1, // Primary Key
   username: "AWatts",
