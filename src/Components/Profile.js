@@ -34,9 +34,9 @@ const user = {
           id: 1,
           book_id: 1,
           bookshelf_id: 1,
-          isbn: 1253
-        }
-      ]
+          isbn: 1253,
+        },
+      ],
     },
 
     {
@@ -50,20 +50,20 @@ const user = {
           id: 1,
           book_id: 1,
           bookshelf_id: 2,
-          isbn: 1045
+          isbn: 1045,
         },
         {
           id: 2,
           book_id: 2,
           bookshelf_id: 2,
-          isbn: 7394
-        }
-      ]
-    }
-  ]
+          isbn: 7394,
+        },
+      ],
+    },
+  ],
 };
 
-const Profile = props => {
+const Profile = (props) => {
   // useEffect(() => {
   //   if (!error) {
   //     const fetchData = async () => {
@@ -73,6 +73,15 @@ const Profile = props => {
   //     fetchData();
   //   }
   // }, []);
+  useEffect(() => {
+    if (!error) {
+      const fetchData = async () => {
+        // insert api call here
+      };
+
+      fetchData();
+    }
+  }, []);
 
   return (
     <ProfileContainer>
@@ -113,7 +122,7 @@ const Profile = props => {
       <BookshelvesAndActivityContainer>
         <Bookshelves>
           <h2>{user.firstName}'s Bookshelves</h2>
-          {user.user_bookshelves.map(book => (
+          {user.user_bookshelves.map((book) => (
             <div className="SingleBookshelf">
               <p>{book.shelf_name}</p>
               <p>{book.bookshelf_books.length}</p>
